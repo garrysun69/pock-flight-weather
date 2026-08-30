@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Label</key>
+	<string>com.garrysun.flightweather.service</string>
+
+	<key>ProgramArguments</key>
+	<array>
+		<string>/usr/bin/python3</string>
+		<string>__HOME__/Library/Application Support/FlightWeather/weather_service.py</string>
+	</array>
+
+	<key>EnvironmentVariables</key>
+	<dict>
+		<key>FWS_LAT</key>
+		<string>50.5583</string>
+		<key>FWS_LON</key>
+		<string>30.4383</string>
+		<key>FWS_PORT</key>
+		<string>8787</string>
+		<key>FWS_TTL</key>
+		<string>300</string>
+	</dict>
+
+	<key>RunAtLoad</key>
+	<true/>
+	<key>KeepAlive</key>
+	<true/>
+
+	<key>StandardOutPath</key>
+	<string>__HOME__/Library/Logs/flightweather.log</string>
+	<key>StandardErrorPath</key>
+	<string>__HOME__/Library/Logs/flightweather.err.log</string>
+</dict>
+</plist>
